@@ -1,0 +1,42 @@
+---
+title: "5-stage-pipeline MIPS CPU"
+description: This project involved the design and implementation of a 5-stage pipeline CPU using Verilog.
+repository: CPUmaker/ComputerOrganizationDesign-BUAA
+date: "2022-11-13"
+published: true
+---
+## 5-Stage Pipeline CPU in Verilog Project
+
+### Overview
+
+This project involved the design and implementation of a 5-stage pipeline CPU using Verilog, showcasing my adeptness in digital design and understanding of computer architecture. The CPU was meticulously structured to optimize processing efficiency and throughput, adhering to a modular design that encompasses several critical components, each tailored to fulfill specific functionalities within the pipeline stages: Instruction Fetch (IF), Instruction Decode (ID), Execute (EXE), Memory Access (MEM), and Write Back (WB).
+
+### Module Specifications:
+
+- PC (Program Counter) Module: Manages the program counter's operations, including synnization resets and updates based on incoming next PC (npc) values. It initializes to a default address upon reset, ensuring a predictable starting point for instruction fetching.
+
+- NPC (Next Program Counter) Module: Calculates the next program counter value considering various branching and jump scenarios, enhancing the CPU's capability to handle control flow efficiently.
+
+- IM (Instruction Memory) Module: Retrieves instructions based on the current address, acting as a repository of the executable program and facilitating the IF stage.
+
+- GRF (General Register File) Module: Performs read and write operations on registers, supporting the ID and WB stages by providing operands for execution and updating register values as instructions are processed.
+
+- ALU (Arithmetic Logic Unit) Module: Executes arithmetic and logic operations, forming the core of the EXE stage with support for addition, subtraction, and bitwise OR, alongside comparison operations.
+
+- DM (Data Memory) Module: Handles read and write operations to memory, crucial for the MEM stage, allowing the CPU to interact with data storage for load and store instructions.
+
+- EXT (Sign/Zero Extension) Module: Processes immediate values for instructions, extending them to the appropriate bit-width for use in the pipeline.
+
+- CMP (Comparison) Module: Compares values for conditional branch instructions, enabling the CPU to make flow control decisions based on dynamic data.
+
+- MultDiv (Multiplier and Divider) Module: Enhances the CPU's computational capabilities with support for multiplication and division operations, providing a basis for complex arithmetic processing.
+
+- DM Decode and DM EXT Modules: Facilitate byte-level manipulation and access within the data memory, enhancing the flexibility and functionality of memory operations.
+
+- CP0 (Coprocessor 0) Module: Manages system control operations, including interrupt handling and processor status, ensuring robust control and configuration of the CPU environment.
+
+- Bridge Module: Serves as an interface between the processor and external devices or memory, managing data and control flow to support peripheral integration and inter-module communication.
+
+### Conclusion
+
+The development of this 5-stage pipeline CPU in Verilog not only demonstrates my capability to tackle complex hardware design challenges but also my dedication to creating efficient, modular, and scalable digital systems. Through this project, I have deepened my expertise in Verilog, computer architecture, and the intricate mechanisms that underpin a CPU's operation, preparing me for further exploration and innovation in the field of digital design and engineering.
